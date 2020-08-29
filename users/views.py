@@ -4,7 +4,9 @@ from .forms import UserRegisterForm
 from django.shortcuts import render, redirect
 from django.contrib import messages 
 from django.contrib.auth import authenticate, login,logout
+from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
+
 
 # Create your views here.
 def registeruser(request):
@@ -14,12 +16,16 @@ def registeruser(request):
 		form=UserRegisterForm()
 		if request.method=='POST':
 			form=UserRegisterForm(request.POST)
-			if form.is_valid:
-				form.save()
-				username = form.cleaned_data.get('username')
-				messages.success(request, f'Account created for {username}!')
-				return redirect('login')
+			try:
+				if form.is_valid:
+					form.save()
+					username = form.cleaned_data.get('username')
+					messages.success(request, f'Account created for {username}!')
+					return redirect('login')
+			except ValueError:
+				messages.info(request, '')
 		return render(request,'users/register.html',{'form':form})
+
 
 def loginuser(request):
 	if request.user.is_authenticated:
