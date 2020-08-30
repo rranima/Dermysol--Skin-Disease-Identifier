@@ -62,8 +62,12 @@
                                 </li>
                             </ul>
                         </div>
-                             <li class="hello-msg ">Hello, {{request.user}}</li>
+                        {% if user.is_authenticated %}
+                            <li class="hello-msg ">Hello, {{request.user}}</li>
                             <span ><a  class="btn_2 d-none d-lg-block " href="{% url 'logout' %}">Logout</a></span>
+                        {% else %}
+                            <span ><a  class="btn_2 d-none d-lg-block " href="{% url 'login' %}">Login</a></span>
+                        {% endif %}
                     </nav>
                 </div>
             </div>
