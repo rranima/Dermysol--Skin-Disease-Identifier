@@ -1,6 +1,7 @@
- .idea/
+
 
  venv/
+
 
 
 # Created by https://www.toptal.com/developers/gitignore/api/pycharm,visualstudio,django
@@ -606,3 +607,6 @@ MigrationBackup/
 .ionide/
 
 # End of https://www.toptal.com/developers/gitignore/api/pycharm,visualstudio,django
+
+
+.idea/
