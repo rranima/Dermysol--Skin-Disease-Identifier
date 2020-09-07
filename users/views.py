@@ -29,7 +29,7 @@ def registeruser(request):
 
 def loginuser(request):
 	if request.user.is_authenticated:
-		return redirect('home')
+		return redirect('dashboard')
 	else:
 		if request.method == 'POST':
 			username=request.POST.get('username')		
@@ -37,15 +37,24 @@ def loginuser(request):
 			user = authenticate(request, username=username, password=password)
 			if user is not None:
 				login(request, user)
-				return redirect('home')
+				return redirect('dashboard')
 			else:
 				messages.info(request, 'Username OR password is incorrect')
 		context = {}
 		return render(request, 'users/login.html', context)
 
+
 def logoutuser(request):
 	logout(request)
-	return redirect('login')
+	return redirect('home')
+
 
 def homepage(request):
     return render(request,'users/home.html')
+
+
+def dashboard(request):
+	return render(request,'users/dashboard.html')
+
+def upload(request):
+	return render(request,'users/upload.html')
