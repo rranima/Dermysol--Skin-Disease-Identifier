@@ -14,13 +14,14 @@
                 <div class="col-lg-5 col-xl-5">
                     <div class="banner_text">
                         <div class="banner_text_iner">
-                             <h2>Hello, {{request.user}}</h2>
+                             {% if user.is_authenticated %}
+                                <h2>Hello, {{request.user}}</h2>                        {% else %}
+                        {% endif %}
                             <h5>We are here for your care</h5>
 
                             <h1>Best Care &
                                 Better Doctor</h1>
                             <a href="#" class="btn_2">Make an appointment</a>
-
                         </div>
                     </div>
                 </div>
