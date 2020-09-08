@@ -49,3 +49,6 @@ def logoutuser(request):
 
 def homepage(request):
     return render(request,'users/home.html')
+
+def dashboard(request):
+    return render(request,'users/dashboard.html')
