@@ -85,8 +85,6 @@ def predictimage(request):
         x = preprocess_input(x)
         images = np.vstack([x])
         classes = model.predict(images)
-        images = np.vstack([x])
-        classes = model.predict(images)
         maximum = 0.9
         for i, value in enumerate(classes[0]):
             if value > maximum:
