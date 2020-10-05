@@ -2,7 +2,6 @@
 {% load static %}
 {% block navextra%}
  {% if user.is_authenticated %}
-                            <li class="hello-msg ">Hello, {{request.user}}</li>
                             <span ><a  class="btn_2 d-none d-lg-block " href="{% url 'logout' %}">Logout</a></span>
                         {% else %}
                             <span ><a  class="btn_2 d-none d-lg-block " href="{% url 'login' %}">Login</a></span>
@@ -15,10 +14,17 @@
                 <div class="col-lg-5 col-xl-5">
                     <div class="banner_text">
                         <div class="banner_text_iner">
+                             {% if user.is_authenticated %}
+                                <h2>Hello, {{request.user}}</h2>                        {% else %}
+                        {% endif %}
                             <h5>We are here for your care</h5>
+
                             <h1>Best Care &
                                 Better Doctor</h1>
+
                             <a href="#" class="btn_2">Start Your Scan</a>
+
+                            
 
                         </div>
                     </div>
