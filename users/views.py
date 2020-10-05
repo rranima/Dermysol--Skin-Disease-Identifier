@@ -94,3 +94,4 @@ def predictimage(request):
         return render(request, 'users/upload.html', context)
     else:
         return render(request, 'users/upload.html')
+      
