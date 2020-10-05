@@ -16,16 +16,20 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from users import views as user_views
-
+from django.conf import settings
+from django.conf.urls.static import static
+from uimage import views as uimage_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',user_views.homepage,name='home'),
     path('dashboard/',user_views.dashboard,name='dashboard'),
-    path('upload/',user_views.upload,name='upload'),
     path('register/', user_views.registeruser,name='register'),
     path('login/', user_views.loginuser,name='login'),
     path('logout/', user_views.logoutuser,name='logout'),
-    path('',user_views.homepage,name='home')
+    path('predictimage', uimage_views.predictimage,name='predictimage'),
+    
 
 ]
+
+urlpatterns += static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
