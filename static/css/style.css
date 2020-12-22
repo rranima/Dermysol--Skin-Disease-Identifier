@@ -712,7 +712,7 @@ ul {
 .single-blog .tag {
   text-align: left;
   display: inline-block;
-  float: left;
+  /*float:left;*/
   font-size: 13px;
   font-weight: 300;
   margin-right: 22px;
@@ -2826,7 +2826,7 @@ ul {
   padding-top: 12px;
   color: #242429;
   width: 50%;
-  float: left;
+  /*float: left;*/
   font-family: "Playfair Display", serif;
   position: relative;
   padding-left: 29px;

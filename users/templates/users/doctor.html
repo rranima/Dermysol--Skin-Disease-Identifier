@@ -1,0 +1,70 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Doctor</title>
+    <script src="https://kit.fontawesome.com/65e590674d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static "users/doctor.css" %}">
+  </head>
+<body>
+    <div class="wrapper">
+        <div class="sidebar">
+            <h2>DERMYSOL</h2>
+            <ul>
+                <li><a href="dashboard.html"><i class="fas fa-columns"></i>Dashboard</a></li>
+                <li><a href="dashboard.html"><i class="fas fa-home"></i>Home</a></li>
+                <li><a href="upload.html"><i class="fas fa-upload"></i>Upload</a></li>
+                <li><a href="doctor.html"><i class="fas fa-stethoscope"></i>Doctors</a></li>
+                <li><a href="{% url 'logout' %}"><i class="fas fa-sign-out-alt"></i>Logout</a></li>
+            </ul>
+        </div>
+    </div>
+        <div class="container">
+            <h3>Get Cared For By The Best</h3>
+            <p>We provide the most eminent doctors , most of whom are the finest in their respective<br> arenas and are renowned for developing innovative and revolutionary procedures.</p>
+            
+    </div>
+    
+    <div class="row">
+        <div class="column">
+          <div class="content">
+            <img src="img/7.jpg" alt="doctor" >
+            <h3>Dr. Sarita Shrestha<br>Junior Consutant</h3>
+            <p><b>Degree:</b>MBBS(2010),PhD(2015)</p>
+            <p><b>experince:</b>good exposure to skin diseases and sexually transmitted infections.</p>
+            <p><b>Specialization:</b>good skill in botox injection, dermal fillers, and different types of laser.</p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="content">
+          <img src="img/8.jpg" alt="doctor">
+            <h3>Dr.Adam Billiard<br>Senior Medical Officer</h3>
+            <p><b>Degree:</b>MBBS(1980),PhD(1983)</p>
+            <p><b>experince:</b>good exposure to skin diseaseslike warts basel cell carcinoma.</p>
+            <p><b>Specialization:</b>good skill in botox injection, dermal fillers, and different types of laser.</p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="content">
+          <img src="img/9.jpg" alt="Doctor">
+            <h3>Dr. Justin Staurd<br>Senior Medical Officer </h3>
+            <p><b>Degree:</b>MBBS(1980),PhD(1985)</p>
+            <p><b>experince:</b>good exposure to skin diseases like herpes and vasculitis.</p>
+            <p><b>Specialization:</b>good skill in dermal fillers, and different types of laser treatment.</p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="content">
+          <img src="img/10.jpg" alt="Mountains">
+            <h3>Dr.Rose Jonas<br>Senior Consultant</h3>
+            <p><b>Degree:</b>MBBS(1985),PhD(1987)</p>
+            <p><b>experince:</b>good exposure to skin diseases and skin cancer like acne and melonoma .</p>
+            <p><b>Specialization:</b>good skill in botox injection ,different types of laser.</p>
+          </div>
+        </div>
+     </div>
+        </body>
+</html>
