@@ -54,4 +54,7 @@ def homepage(request):
 def dashboard(request):
     return render(request, 'users/dashboard.html')
 
+def doctor(request):
+    return render(request, 'users/doctor.html')
+
 

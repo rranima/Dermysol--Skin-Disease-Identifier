@@ -28,6 +28,7 @@ urlpatterns = [
     path('login/', user_views.loginuser,name='login'),
     path('logout/', user_views.logoutuser,name='logout'),
     path('predictimage', uimage_views.predictimage,name='predictimage'),
+    path('doctor/', user_views.doctor,name='doctor'),
     
 
 ]
