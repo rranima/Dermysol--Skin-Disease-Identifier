@@ -5,6 +5,7 @@ from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
+from .models import *
 
 # Create your views here.
 def registeruser(request):
@@ -57,4 +58,7 @@ def dashboard(request):
 def doctor(request):
     return render(request, 'users/doctor.html')
 
+def diseaseinfo(request):
+    diseases= Disease.objects.all()
+    return render(request,'users/diseaseinfo.html',{'diseases':diseases}) 
 
