@@ -29,7 +29,11 @@ urlpatterns = [
     path('logout/', user_views.logoutuser,name='logout'),
     path('predictimage', uimage_views.predictimage,name='predictimage'),
     path('doctor/', user_views.doctor,name='doctor'),
+
+    path('diseaseinfo/',user_views.diseaseinfo,name='diseaseinfo'),
+
     path('appointment/', user_views.appointment,name='appointment'),
+
 
 ]
 

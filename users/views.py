@@ -5,6 +5,9 @@ from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
+
+from .models import *
+
 from django.core.mail import mail_admins
 
 
@@ -60,6 +63,9 @@ def dashboard(request):
 def doctor(request):
     return render(request, 'users/doctor.html')
 
+def diseaseinfo(request):
+    diseases= Disease.objects.all()
+    return render(request,'users/diseaseinfo.html',{'diseases':diseases}) 
 
 def appointment(request):
     if request.method == 'POST':
