@@ -28,15 +28,14 @@
 		{% for item in diseases %}
 		<div id="accordion">
 			<div class="card">
-			  <div class="card-header" id="headingOne">
+			  <div class="card-header" id="heading">
 				<h5 class="mb-0">
-				  <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+				  <button class="btn btn-link" data-toggle="collapse" data-target="#collapse{{item.name}}" aria-expanded="true" aria-controls="collapse">
 					{{item.name}}
 				  </button>
 				</h5>
 			  </div>
-		  
-			  <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+			  <div id="collapse{{item.name}}" class="collapse" aria-labelledby="heading" data-parent="#accordion">
 				<div class="card-body">
 					{{item.description}}
 				</div>
@@ -44,12 +43,6 @@
 			</div>
 
 		  </div>
-			<!-- <div class="disease_name">
-				{{item.name}}
-			</div>	
-			<br>
-			<div class="disease_info">{{item.description}}</div>
-			<br> -->
 		{% endfor %}
 	  </div>
 	</div>
