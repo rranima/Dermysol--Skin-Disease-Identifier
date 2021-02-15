@@ -184,7 +184,7 @@ a:hover {
 
 /* line 87, ../../01 cl html template/03_jun 2019/182_medico_html/sass/_common.scss */
 h1, h2, h3, h4, h5, h6 {
-  color: #242429;
+  color: #ffffff;
   font-family: "Playfair Display", serif;
 }
 
@@ -199,10 +199,10 @@ p {
 }
 
 /* line 100, ../../01 cl html template/03_jun 2019/182_medico_html/sass/_common.scss */
-h2 {
+h2,h3 {
   font-size: 44px;
   line-height: 28px;
-  color: #242429;
+  color: #FFFFFF; !important
   font-weight: 600;
   line-height: 1.222;
 }
