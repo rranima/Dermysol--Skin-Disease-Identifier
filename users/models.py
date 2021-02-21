@@ -7,3 +7,17 @@ class Disease(models.Model):
 
 	def __str__(self):
 		return self.name
+
+class Appointment(models.Model):
+    name = models.CharField(max_length=200)
+    email = models.EmailField(max_length=200)
+    service = models.CharField(max_length=200)
+    time = models.CharField(max_length=200)
+    subject = models.CharField(max_length=200)
+    note = models.TextField()
+
+    class Meta:
+        verbose_name_plural = "Appointment"
+
+    def __str__(self):
+        return self.name + "-" + self.email
