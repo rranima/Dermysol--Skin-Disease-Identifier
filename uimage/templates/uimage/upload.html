@@ -15,15 +15,16 @@
     <div class="sidebar">
         <h2>DERMYSOL</h2>
         <ul>
-            <li><a href="{% url 'dashboard' %}"><i class="fas fa-columns"></i>Dashboard</a></li>
-           <li><a href="{% url 'home' %}"><i class="fas fa-home"></i>Home</a></li>
-           <li><a href="{% url 'predictimage' %}"><i class="fas fa-upload"></i>Upload</a></li>
-           <li><a href="{% url 'logout' %}"><i class="fas fa-sign-out-alt"></i>Logout</a></li>
+             <li><a href="{% url 'dashboard' %}"><i class="fas fa-columns"></i>Dashboard</a></li>
+               <li><a href="{% url 'home' %}"><i class="fas fa-home"></i>Home</a></li>
+               <li><a href="{% url 'predictimage' %}"><i class="fas fa-upload"></i>Upload</a></li>            
+               <li><a href="{% url 'diseaseinfo' %}"><i class="fas fa-info-circle"></i>Diseases</a></li>
+               <li><a href="{% url 'logout' %}"><i class="fas fa-sign-out-alt"></i>Logout</a></li>
         </ul>
     </div>
-    <div class="main-content">
+    <div class="main-content" style="display:flex;margin:2rem 10rem 0rem 30rem;">
       <div id="imgupload">
-      <h2>Upload Image for Classification</h2>
+      <h2 style="color:lightblue;"> Please Upload Your Image for Classification</h2>
        <br>
       <form method="post" enctype="multipart/form-data" action="predictimage" >
         {% csrf_token %}

@@ -30,6 +30,7 @@ urlpatterns = [
     path('predictimage', uimage_views.predictimage,name='predictimage'),
     path('doctor/', user_views.doctor,name='doctor'),
     path('appointment/', user_views.appointment,name='appointment'),
+    path('diseaseinfo/',user_views.diseaseinfo,name='diseaseinfo'),
 
 ]
 
