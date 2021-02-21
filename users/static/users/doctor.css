@@ -23,6 +23,10 @@
      height:100%;
      background: rgb(130, 201, 245);
      padding:20px;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 34f58f831b1f19b36d45f6847f29618d91bc6219
  }
  .wrapper .sidebar h2 {
      color:rgb(48, 46, 46);
@@ -328,7 +332,8 @@ clear: both;
 background-color: white;
 padding: 10px;
 }
-/* Responsive layout - makes a two column-layout instead of four columns 
+
+/* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 900px) {
   .title h3{
     margin-left:350px;

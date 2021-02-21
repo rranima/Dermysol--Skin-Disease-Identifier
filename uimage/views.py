@@ -38,3 +38,4 @@ def predictimage(request):
         return render(request, 'uimage/displayimage.html', context)
     else:
         return render(request, 'uimage/upload.html')
+
