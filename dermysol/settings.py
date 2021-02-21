@@ -120,10 +120,10 @@ USE_TZ = True
 
 # Email settings
 
-SERVER_EMAIL = 'skindisease.i2021@gmail.com'
+SERVER_EMAIL = os.environ.get('SERVER_EMAIL')
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_PASSWORD ='SDI@2021'
+EMAIL_HOST_PASSWORD =os.environ.get('EMAIL_HOST_PASSWORD')
 EMAIL_HOST_USER = SERVER_EMAIL
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
